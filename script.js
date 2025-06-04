@@ -59,6 +59,6 @@ navLinks.forEach(link => {
       // Start transition out
       topBar.classList.remove('active');
       bottomBar.classList.remove('active');
-    }, 1800); // Match the CSS transition duration
+    }, 1700); // Match the CSS transition duration
   });
 });
