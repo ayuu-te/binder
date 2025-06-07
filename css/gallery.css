@@ -69,15 +69,15 @@ body {
 
 #nleft a {
     pointer-events: all;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
 }
 
 #nright a {
     pointer-events: all;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
-}
+} 
 
 #hero {
     width: 100%;
@@ -110,7 +110,7 @@ body {
     text-align: right;
     font-size: 14px;
     margin-bottom: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 #heroright #imagediv {
@@ -125,25 +125,33 @@ body {
 }
 
 #heroright p:nth-child(3) {
-    color: #ff2e2e;
+    color: #ffffff;
     margin-bottom: 100px;
 }
 
 #heroleft .element {
+    position: relative;
     /* background-color: #ff2e2e; */
     height: 7vw;
     overflow: hidden;
 }
 
+#heroleft .element h1:nth-child(1){
+    top: 0%;
+}
+
 #heroleft .element h1 {
+    position: absolute;
     font-size: 8vw;
+    top: 100%;
+    left: 0%;
     font-family: "Squada One", sans-serif;
     line-height: .9;
     letter-spacing: .9px;
     font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 #heroleft button a {
@@ -151,7 +159,7 @@ body {
     font-size: 2vw;
     text-decoration: none;
     font-family: "Staatliches", sans-serif;
-    color: #fff;
+    color: #000000;
     font-weight: 200;
 }
 
@@ -159,6 +167,6 @@ body {
     pointer-events: all;
     margin-top: 8vw;
     padding: 1vw 4vw;
-    border: 4px solid #000;
-    background-color: #ff2e2e;
+    border: 4px solid #000000;
+    background-color: #ffffff;
 }
