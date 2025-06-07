@@ -39,13 +39,76 @@ html, body{
 
 #hero{
   width: 100%;
-  height: 100px;
   padding: 0vw 10vw;
+  justify-content: space-between;
   margin-top: 20vw;
+  display: flex;
+}
+
+#sustain{
+  width:10vw
+}
+
+#sustain p {
+  font-size: 12px;
+  font-weight: 800;
+  opacity: .5;
+  text-transform: capitalize;
+  margin: 10px 0;
 }
 
 #sustain #susimage{
-  width: 10vw;
-  height: 15vw;
-  background: #dd4545;
+  width: 160%;
+  position: relative;
+  overflow: hidden;
+  height: 25vw;
+  /* background: #dd4545; */
+}
+
+#susimage img{
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  transform: translate(-17%, -25%);
+  top: 22%;
+  right: auto;
+  object-fit: cover;
+}
+
+#heading{
+  width: 25vh;
+  height: 36vh;
+  /* margin-left: 10vw; */
+  background: #d41616;
+}
+
+#circles{
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: 2vw;
+  /* position: relative; */
+}
+
+#heading h1{
+  font-size: 2vw;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#visit{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#visit h3{
+  font-size: 1vw;
+  font-weight: 200;
+  color: #000;
 }
