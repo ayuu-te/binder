@@ -1,3 +1,10 @@
+### these are some links i am keeping 
+
+### this is going to be my portfolio, I will be updating it once I finish this.
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Squada+One&family=Staatliches&family=VT323&display=swap" rel="stylesheet">
