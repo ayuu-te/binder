@@ -1,20 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   block-size: border-box;
 }
 
-html, body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
-#main{
+#main {
   width: 100%;
 }
 
-#nav{
+#nav {
   padding: 3vw 10vw;
   margin-top: 20px;
   display: flex;
@@ -22,31 +23,35 @@ html, body{
 
 }
 
-#navleft{
+#navleft {
   display: flex;
   gap: 20px;
 }
 
-#navright{
+#navright {
   display: flex;
   gap: 20px;
 }
 
-#nav a{
+#nav a {
   text-decoration: none;
   color: #000;
 }
 
-#hero{
+#hero {
   width: 100%;
   padding: 0vw 10vw;
-  justify-content: space-between;
-  margin-top: 20vw;
+  margin-top: 10vw;
   display: flex;
+  gap: 25vw;
+
+  /* justify-content: space-around; or space-evenly or gap if needed */
+  align-items: flex-start;       /* Makes vertical alignment consistent */
 }
 
-#sustain{
-  width:10vw
+
+#sustain {
+  width: 10vw
 }
 
 #sustain p {
@@ -57,7 +62,7 @@ html, body{
   margin: 10px 0;
 }
 
-#sustain #susimage{
+#sustain #susimage {
   width: 160%;
   position: relative;
   overflow: hidden;
@@ -65,7 +70,7 @@ html, body{
   /* background: #dd4545; */
 }
 
-#susimage img{
+#susimage img {
   position: absolute;
   width: 150%;
   height: 150%;
@@ -75,14 +80,14 @@ html, body{
   object-fit: cover;
 }
 
-#heading{
+#heading {
   width: 25vh;
   height: 36vh;
   /* margin-left: 10vw; */
   background: #d41616;
 }
 
-#circles{
+#circles {
   border-radius: 50%;
   border: 1px solid #000;
   display: flex;
@@ -93,7 +98,7 @@ html, body{
   /* position: relative; */
 }
 
-#heading h1{
+#heading h1 {
   font-size: 2vw;
   font-weight: 800;
   color: #fff;
@@ -101,13 +106,16 @@ html, body{
   margin-top: 10px;
 }
 
-#visit{
+#visit {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-direction: column; /* Stack icon and showroom vertically if needed */
+  width: 10vw;            /* Add a width similar to #sustain */
+  margin-top: 2vw;        /* Optional: fine-tune vertical alignment */
 }
 
-#visit h3{
+#visit h3 {
   font-size: 1vw;
   font-weight: 200;
   color: #000;
