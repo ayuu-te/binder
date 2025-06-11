@@ -11,8 +11,9 @@ body {
   width: 100%;
 }
 
-#main {
-  width: 100%;
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #nav {
@@ -20,7 +21,6 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-
 }
 
 #navleft {
@@ -39,19 +39,16 @@ body {
 }
 
 #hero {
-  width: 100%;
-  padding: 0vw 10vw;
-  margin-top: 10vw;
+  margin-top: 20vw;
+  padding: 0 10vw;
   display: flex;
-  gap: 25vw;
-
-  /* justify-content: space-around; or space-evenly or gap if needed */
-  align-items: flex-start;       /* Makes vertical alignment consistent */
+  justify-content: space-between;
 }
 
 
 #sustain {
-  width: 10vw
+  width: 10vw;
+  margin-top: 15vw;
 }
 
 #sustain p {
@@ -95,7 +92,6 @@ body {
   justify-content: center;
   width: 2vw;
   height: 2vw;
-  /* position: relative; */
 }
 
 #heading h1 {
@@ -110,13 +106,76 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-direction: column; /* Stack icon and showroom vertically if needed */
-  width: 10vw;            /* Add a width similar to #sustain */
-  margin-top: 2vw;        /* Optional: fine-tune vertical alignment */
+  /* width: 10vw;             */
+  margin-top: 2vw;        
 }
 
 #visit h3 {
   font-size: 1vw;
   font-weight: 200;
   color: #000;
+}
+
+
+
+
+
+/* Transition Bars */
+.transition-bar {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  background: #111;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 1.5s cubic-bezier(.77,0,.18,1); /* was 0.7s */
+}
+
+.top-bar {
+  top: 0;
+  align-items: flex-end;
+  transform: translateY(-100%);
+}
+
+.bottom-bar {
+  bottom: 0;
+  align-items: flex-start;
+  transform: translateY(100%);
+}
+
+.bar-text {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.2em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.onn-text {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1px;
+}
+
+.off-text {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 1px;
+}
+
+/* Active state for transition */
+.transition-bar.active.top-bar {
+  transform: translateY(0);
+}
+
+.transition-bar.active.bottom-bar {
+  transform: translateY(0);
 }

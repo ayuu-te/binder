@@ -12,9 +12,16 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/transition.css">
 </head>
 
 <body>
+<!-- Transition Bars -->
+<div class="transition-bar top-bar"><span class="bar-text onn-text">ONN</span></div>
+<div class="transition-bar bottom-bar"><span class="bar-text off-text">OFF</span></div>
+
+  <!-- Navigation -->
+
     <div id="main">
         <div id="back">
             <img src="../images/greenmount.jpg" alt="">
@@ -27,12 +34,12 @@
             <div id="workingaea">
                 <div id="nav">
                     <div id="nleft">
-                        <a href="../index.html"><img src="../images/imamge.jpg" alt="img"></a>
-                        <a href="../pages/products.html">Products</a>
-                        <a href="../pages/contact.html">Contact</a>
+                        <a href="../index.html" class="transition-link"><img src="../images/imamge.jpg" alt="img"></a>
+                        <a href="../pages/products.html" class="transition-link">Products</a>
+                        <a href="../pages/contact.html"class="transition-link">Contact</a>
                     </div>
                     <div id="nright">
-                        <a href="../pages/gyaan.html">Gyaan</a>
+                        <a href="../pages/gyaan.html" class="transition-link">Gyaan</a>
                     </div>
                 </div>
                 <div id="hero">
@@ -75,7 +82,51 @@
         </div>
     </div>
 
+
+    <!-- <script src="../binder/js/transition.js"></script> -->
     <script src="../js/gallery.js"></script>
+    <script>
+        
+  const topBar = document.querySelector('.top-bar');
+  const bottomBar = document.querySelector('.bottom-bar');
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  // On click, animate and store transition state
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const destination = this.getAttribute('href');
+
+      // Set flag for entry animation
+      sessionStorage.setItem('shouldAnimate', 'true');
+
+      // Animate bars in
+      topBar.classList.add('active');
+      bottomBar.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 1700);
+    });
+  });
+
+  // On load: check if should animate out
+  window.addEventListener('DOMContentLoaded', () => {
+    const shouldAnimate = sessionStorage.getItem('shouldAnimate');
+    if (shouldAnimate) {
+      // Start with bars visible
+      topBar.classList.add('active');
+      bottomBar.classList.add('active');
+
+      // Animate them out
+      setTimeout(() => {
+        topBar.classList.remove('active');
+        bottomBar.classList.remove('active');
+        sessionStorage.removeItem('shouldAnimate');
+      }, 100); // small delay to allow class application
+    }
+  });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>

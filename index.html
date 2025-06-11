@@ -15,16 +15,25 @@
 </head>
 
 <body>
+
+
+<!-- Transition Bars -->
+<div class="transition-bar top-bar"><span class="bar-text onn-text">ONN</span></div>
+<div class="transition-bar bottom-bar"><span class="bar-text off-text">OFF</span></div>
+
+  <!-- Navigation -->
+
+
   <div id="main">
     <div id="nav">
       <div id="navleft">
-        <a href="index.html">Home</a>
-        <a href="../pages/products.html">Products</a>
-        <a href="../pages/contact.html">Contact</a>
+        <a href="index.html" class="transition-link">Home</a>
+        <a href="../pages/products.html" class="transition-link">Products</a>
+        <a href="../pages/contact.html" class="transition-link">Contact</a>
       </div>
       <div id="navright">
-        <a href="../pages/gyaan.html">Gyaan</a>
-        <a href="../pages/gallery.html">Gallery</a>
+        <a href="../pages/gyaan.html" class="transition-link">Gyaan</a>
+        <a href="../pages/gallery.html" class="transition-link">Gallery</a>
       </div>
     </div>
 
@@ -34,24 +43,79 @@
         <h5>01.</h5>
         <h1>Devine.</h1>
         <p>committed to sustainability and eco-friendly practices</p>
-          <div id="susimage">
-            <img src="../images/image.jpg" alt="">
-          </div>
+        <div id="susimage">
+          <img src="../images/image.jpg" alt="">
+        </div>
       </div>
-      
+
       <div id="heading">
         <h1>Ayush</h1>
       </div>
-      
+
       <div id="visit">
         <div id="circles">
           <i class="ri-shut-down-fill"></i>
         </div>
         <h3>showroom</h3>
       </div>
-      
+
     </div>
+
+
+
+
+
+
+
   </div>
+
+
+
+
+  <!-- <script src="../binder/js/transition.js"></script> -->
+  <script>
+    
+  const topBar = document.querySelector('.top-bar');
+  const bottomBar = document.querySelector('.bottom-bar');
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  // On click, animate and store transition state
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const destination = this.getAttribute('href');
+
+      // Set flag for entry animation
+      sessionStorage.setItem('shouldAnimate', 'true');
+
+      // Animate bars in
+      topBar.classList.add('active');
+      bottomBar.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 1700);
+    });
+  });
+
+  // On load: check if should animate out
+  window.addEventListener('DOMContentLoaded', () => {
+    const shouldAnimate = sessionStorage.getItem('shouldAnimate');
+    if (shouldAnimate) {
+      // Start with bars visible
+      topBar.classList.add('active');
+      bottomBar.classList.add('active');
+
+      // Animate them out
+      setTimeout(() => {
+        topBar.classList.remove('active');
+        bottomBar.classList.remove('active');
+        sessionStorage.removeItem('shouldAnimate');
+      }, 100); // small delay to allow class application
+    }
+  });
+   </script>
+  <script src="../binder/js/script.js"></script>
 </body>
 
 </html>
