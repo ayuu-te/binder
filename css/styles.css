@@ -103,15 +103,16 @@ body::-webkit-scrollbar {
   width: 50%;
   line-height: 1.3;
   letter-spacing: -.1vw;
-  top: 105%;
+  top: 125%;
 }
 
 
 #heading img {
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
 }
+
 #circles {
   border-radius: 50%;
   border: 1px solid #000;
@@ -144,4 +145,8 @@ body::-webkit-scrollbar {
   font-size: 2vw;
   font-weight: 500;
   color: #000;
+}
+
+#motive h1 {
+  padding: 3vw 10vw;
 }
