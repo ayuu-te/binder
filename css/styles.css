@@ -147,6 +147,13 @@ body::-webkit-scrollbar {
   color: #000;
 }
 
-#motive h1 {
+#motive {
   padding: 3vw 10vw;
+}
+
+#motive span {
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
 }
