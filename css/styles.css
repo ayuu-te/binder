@@ -149,11 +149,28 @@ body::-webkit-scrollbar {
 
 #motive {
   padding: 3vw 10vw;
+  margin-top: 7vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#motive p {
+  position: relative;
+  right: 0;
+  text-align: right;
+  width: 80%;
+  font-size: 2vw;
 }
 
 #motive span {
   display: inline-block;
-  width: 2vw;
-  height: 2vw;
-  border-radius: 50%;
+  margin: 0 13px;
+  border-radius: 100px;
+  margin-bottom: -12.5px;
+  background-color: #220505;
+}
+
+#onespan {
+  width: 120px;
+  height: 50px;
 }
