@@ -156,6 +156,8 @@ body::-webkit-scrollbar {
 
 #motive p {
   position: relative;
+  line-height: 1.7;
+  font-weight: 800;
   right: 0;
   text-align: right;
   width: 80%;
