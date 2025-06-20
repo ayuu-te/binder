@@ -157,11 +157,11 @@ body::-webkit-scrollbar {
 #motive p {
   position: relative;
   line-height: 1.7;
-  font-weight: 800;
-  right: 0;
+  font-weight: 500;
+  margin-top: 5vw;
   text-align: right;
   width: 80%;
-  font-size: 2vw;
+  font-size: 2.1vw;
 }
 
 #motive span {
@@ -173,6 +173,37 @@ body::-webkit-scrollbar {
 }
 
 #onespan {
+  width: 80px;
+  height: 50px;
+  background-size: cover;
+  background-position:  top center;
+  background-image: url(../images/face.jpg);
+}
+
+#twospan {
   width: 120px;
   height: 50px;
+  background-size: cover;
+  background-position:  top center;
+  background-image: url(../images/frame.jpg);
+}
+
+#threespan {
+  width: 80px;
+  height: 50px;
+  background-size: cover;
+  background-position:  top center;
+  background-image: url(../images/mountains.jpg);
+}
+
+#picture {
+  padding: 3vw;
+  padding-left: 14vw;
+  padding-right: 12vw;
+}
+
+#firstpic #picimg {
+  width: 17vw;
+  height: 10px;
+  background-color: #c92323;
 }
