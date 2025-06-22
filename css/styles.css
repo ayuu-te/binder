@@ -254,3 +254,14 @@ body::-webkit-scrollbar {
   width: 50%;
   text-align: right;
 }
+
+#banner {
+  width: 100%;
+  margin-top: 8vw;
+}
+
+#bimg{
+  width: 65%;
+  height: 60vh;
+  background-color: red;
+}
