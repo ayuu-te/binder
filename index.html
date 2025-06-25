@@ -5,28 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayush Verma</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="css\styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <div id="main">
+    <div id="home">
     <div id="nav">
       <div id="navleft">
-        <a href="index.html" id="active">Home</a>
-        <a href="../pages/products.html">Products</a>
-        <a href="../pages/contact.html">Contact</a>
+        <a class="nlink" href="index.html">Home</a>
+        <a class="nlink" href="../pages/products.html">Products</a>
+        <a class="nlink" href="../pages/contact.html">Contact</a>
       </div>
       <div id="navright">
-        <a href="../pages/gyaan.html">Gyaan</a>
-        <a href="../pages/gallery.html">Gallery</a>
+        <a class="nlink" href="../pages/gyaan.html">Gyaan</a>
+        <a class="nlink" href="../pages/gallery.html">Gallery</a>
       </div>
     </div>
 
@@ -59,14 +63,13 @@
       </div>
 
     </div>
-
+    </div>
     <div id="motive">
       <h3>OUR MOTIVE</h3>
       <p>Lorem ipsum dolor<span id="onespan"></span>sit amet consectetur adipisicing elit. Quae,<span
           id="twospan"></span>suscipit. Lorem ipsum dolor<span id="threespan"></span>sit amet consectetur adipisicing
         elit. Iusto, consequatur!</p>
     </div>
-
     <div id="picture">
       <div id="firstpic">
         <div id="picimg">
@@ -84,7 +87,6 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
       </div>
     </div>
-
     <div id="banner">
       <div id="bimg">
         <img src="../images/mountains.jpg" alt="">
@@ -96,19 +98,32 @@
       </div>
     </div>
     <div id="future">
-      <video src="video\Simple-Dot.mp4" autoplay muted loop></video>
+      <video src="video\Simple-Dot" alt = "video" autoplay muted loop></video>
       <div id="ftext">
         <h1>future is here</h1>
         <button>join the movement</button>
       </div>
     </div>
-
-
   </div>
 
 
-  <script src="../binder/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+<script src="js\script.js"></script>
 </body>
 
 </html>
