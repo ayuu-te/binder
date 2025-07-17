@@ -55,9 +55,13 @@ Shery.imageEffect("#bimg", {
 })
 
 
-document.querySelectorAll("#ftext button")
+document.querySelector("#ftext button")
 .addEventListener("mouseover", function() {
-
+  gsap.to("#future video", {
+    opacity: 1,
+    duration: 1,
+    ease: Power4
+  })
 })
 
 document.querySelectorAll("#ftext button")

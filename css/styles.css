@@ -286,6 +286,7 @@ body::-webkit-scrollbar {
 }
 #future video {
   width: 100%;
+  opacity: 0;
   position: absolute;
   object-fit: cover;
 }
