@@ -361,18 +361,19 @@ header a {
 }
 
 .carousel.showDetail .list .item:nth-child(2) img {
-  right: 50%;
+  right: 55%;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail {
   opacity: 1;
-  width: 50%;
+  width: 45%;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
   pointer-events: auto;
+  padding-left: 30px;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
@@ -461,13 +462,11 @@ header a {
   font-family: monospace;
   border: 1px solid #5555;
   font-size: large;
-  bottom: 20%;
-  left: 10%;
 }
 
 #next {
   left: unset;
-  right: 10%;
+  right: unset;
 }
 
 #back {
@@ -483,18 +482,26 @@ header a {
   letter-spacing: 3px;
   background-color: transparent;
   padding: 10px;
-  /* opacity: 0; */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s;
 }
 
 .carousel.showDetail #back {
   opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel #prev,
+.carousel #next {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .carousel.showDetail #prev,
 .carousel.showDetail #next {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .carousel::before {
