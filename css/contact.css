@@ -50,6 +50,8 @@ body {
   margin: 0;
   background-color: #f4f4f4;
   font-family: Poppins;
+  height: 100vh;
+  overflow: hidden;
 }
 
 :root {
@@ -88,10 +90,16 @@ header {
   /* height: 50px; */
   /* align-items: center; */
   font-weight: bold;
-  padding: 3vw 10vw;
-  margin-top: 20px;
-  position: relative;
+  padding: 2vh 10vw;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  height: 10vh;
+  display: flex;
+  align-items: center;
 }
 
 header a {
@@ -102,17 +110,19 @@ header a {
 
 /* carousel */
 .carousel {
-  position: relative;
-  height: 100vh;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  height: 90vh;
   overflow: hidden;
-  margin-top: -50px;
 }
 
 .carousel .list {
   position: absolute;
   width: 1140px;
   max-width: 90%;
-  height: 80%;
+  height: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -139,7 +149,7 @@ header a {
   width: 50%;
   position: absolute;
   right: -20%;
-  top: 70%;
+  top: 50%;
   transform: translateY(-50%);
   transition: right 1.5s;
 }
@@ -434,7 +444,7 @@ header a {
 
 .arrows {
   position: absolute;
-  bottom: 10px;
+  bottom: 2vh;
   width: 1140px;
   max-width: 90%;
   display: flex;
@@ -463,7 +473,7 @@ header a {
 #back {
   position: absolute;
   z-index: 100;
-  bottom: 0%;
+  bottom: 1vh;
   left: 50%;
   transform: translateX(-50%);
   border: none;
@@ -489,11 +499,11 @@ header a {
 
 .carousel::before {
   width: 20vw;
-  height: 80vh;
+  height: 90vh;
   content: "";
   background-image: linear-gradient(70deg, #dc422a, blue);
   position: fixed;
-  top: 0;
+  top: 10vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -521,7 +531,7 @@ header a {
 @media screen and (max-width: 767px) {
   /* mobile */
   .carousel {
-    height: 600px;
+    height: 90vh;
   }
 
   .carousel .list .item {
