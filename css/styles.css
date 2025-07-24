@@ -122,12 +122,12 @@ body::-webkit-scrollbar {
   width: 2vw;
   height: 2vw;
 }
-#heading h1 {
+#headings h1 {
   font-size: 5vw;
   font-weight: 800;
   letter-spacing: -0.4vw;
   line-height: 0.8;
-  color: var(--primary-color);
+  color: black;
   text-transform: uppercase;
   margin-top: 10px;
 }
@@ -150,6 +150,11 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
 }
+#motive h4 {
+  font-size: 1.5vw;
+  font-weight: 550;
+}
+
 #motive p {
   position: relative;
   line-height: 1.7;
@@ -265,6 +270,7 @@ body::-webkit-scrollbar {
 #btext {
   width: 35%;
   padding: 0 3vw;
+  /* text-align: end; */
 }
 #btext h1 {
   font-size: 2.5vw;
@@ -296,7 +302,7 @@ body::-webkit-scrollbar {
 #ftext {
   position: relative;
   z-index: 1;
-  color: var(--secondary-color);
+  color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -373,26 +379,35 @@ body::-webkit-scrollbar {
   text-align: center;
   color: #fff;
   z-index: 15;
-  max-width: 100%;
+  max-width: 320px;
   position: absolute;
-  bottom: 100px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 8px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
 
 .mobile-message h3 {
   font-size: 1.2rem;
-  /* margin-bottom: 12px; */
+  margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Staatliches", cursive;
+}
+
+.mobile-message p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.2px;
 }
 
 .image-stack {
