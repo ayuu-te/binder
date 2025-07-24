@@ -381,10 +381,10 @@ body::-webkit-scrollbar {
   z-index: 15;
   max-width: 320px;
   position: absolute;
-  bottom: 40px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 20px;
+  padding: 8px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -393,21 +393,11 @@ body::-webkit-scrollbar {
 
 .mobile-message h3 {
   font-size: 1.2rem;
-  margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Staatliches", cursive;
-}
-
-.mobile-message p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
-  margin: 0;
-  letter-spacing: 0.2px;
 }
 
 .image-stack {
@@ -423,7 +413,7 @@ body::-webkit-scrollbar {
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
   transform-origin: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2),
@@ -446,73 +436,115 @@ body::-webkit-scrollbar {
   box-shadow: 0 30px 70px rgba(255, 255, 255, 0.2),
     0 20px 45px rgba(0, 0, 0, 0.4), 0 10px 25px rgba(0, 0, 0, 0.3),
     0 0 0 2px rgba(255, 255, 255, 0.15);
-  animation: riseFromBelow 0.4s ease-out;
+  animation: breathingRise 1s ease-in-out infinite;
 }
 
 /* Cards above active */
 .image-card[data-relative="-1"] {
   z-index: 9;
+  --card-y: -40px;
+  --card-scale: 0.94;
+  --card-rotate: 2deg;
   transform: translateY(-40px) scale(0.94) rotateX(2deg);
   opacity: 1;
   filter: brightness(1);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: breathingWave 1s ease-in-out infinite 0.1s;
 }
 
 .image-card[data-relative="-2"] {
   z-index: 8;
+  --card-y: -70px;
+  --card-scale: 0.88;
+  --card-rotate: 3deg;
   transform: translateY(-70px) scale(0.88) rotateX(3deg);
   opacity: 1;
   filter: brightness(1);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.2);
+  animation: breathingWave 1s ease-in-out infinite 0.2s;
 }
 
 .image-card[data-relative="-3"] {
   z-index: 7;
+  --card-y: -95px;
+  --card-scale: 0.82;
+  --card-rotate: 4deg;
   transform: translateY(-95px) scale(0.82) rotateX(4deg);
   opacity: 0.9;
   filter: brightness(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 12px rgba(0, 0, 0, 0.15);
+  animation: breathingWave 1s ease-in-out infinite 0.3s;
 }
 
 .image-card[data-relative="-4"] {
   z-index: 6;
+  --card-y: -115px;
+  --card-scale: 0.76;
+  --card-rotate: 5deg;
   transform: translateY(-115px) scale(0.76) rotateX(5deg);
   opacity: 0.8;
   filter: brightness(1);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: breathingWave 1s ease-in-out infinite 0.4s;
 }
 
 /* Cards below active */
 .image-card[data-relative="1"] {
   z-index: 9;
+  --card-y: 40px;
+  --card-scale: 0.94;
+  --card-rotate: -2deg;
   transform: translateY(40px) scale(0.94) rotateX(-2deg);
   opacity: 1;
   filter: brightness(1);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: breathingWave 1s ease-in-out infinite 0.5s;
 }
 
 .image-card[data-relative="2"] {
   z-index: 8;
+  --card-y: 70px;
+  --card-scale: 0.88;
+  --card-rotate: -3deg;
   transform: translateY(70px) scale(0.88) rotateX(-3deg);
   opacity: 1;
   filter: brightness(1);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.2);
+  animation: breathingWave 1s ease-in-out infinite 0.6s;
 }
 
 .image-card[data-relative="3"] {
   z-index: 7;
+  --card-y: 95px;
+  --card-scale: 0.82;
+  --card-rotate: -4deg;
   transform: translateY(95px) scale(0.82) rotateX(-4deg);
   opacity: 0.9;
   filter: brightness(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 12px rgba(0, 0, 0, 0.15);
+  animation: breathingWave 1s ease-in-out infinite 0.7s;
 }
 
 .image-card[data-relative="4"] {
   z-index: 6;
+  --card-y: 115px;
+  --card-scale: 0.76;
+  --card-rotate: -5deg;
   transform: translateY(115px) scale(0.76) rotateX(-5deg);
   opacity: 0.8;
   filter: brightness(1);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: breathingWave 1s ease-in-out infinite 0.8s;
+}
+
+/* Cards outside visible range */
+.image-card[data-relative="hidden"] {
+  z-index: 4;
+  transform: translateY(140px) scale(0.7) rotateX(-8deg);
+  opacity: 0.2;
+  filter: blur(4px) brightness(0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Touch interaction styles */
@@ -521,6 +553,50 @@ body::-webkit-scrollbar {
 }
 
 /* Animation keyframes */
+@keyframes breathingRise {
+  0% {
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+  25% {
+    transform: translateY(-8px) scale(1.01) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02) rotateX(0deg);
+  }
+  75% {
+    transform: translateY(-8px) scale(1.01) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+}
+
+@keyframes breathingWave {
+  0% {
+    transform: translateY(var(--card-y, 0)) scale(var(--card-scale, 1))
+      rotateX(var(--card-rotate, 0deg));
+  }
+  25% {
+    transform: translateY(calc(var(--card-y, 0px) - 5px))
+      scale(calc(var(--card-scale, 1) + 0.008))
+      rotateX(var(--card-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(calc(var(--card-y, 0px) - 10px))
+      scale(calc(var(--card-scale, 1) + 0.015))
+      rotateX(var(--card-rotate, 0deg));
+  }
+  75% {
+    transform: translateY(calc(var(--card-y, 0px) - 5px))
+      scale(calc(var(--card-scale, 1) + 0.008))
+      rotateX(var(--card-rotate, 0deg));
+  }
+  100% {
+    transform: translateY(var(--card-y, 0)) scale(var(--card-scale, 1))
+      rotateX(var(--card-rotate, 0deg));
+  }
+}
+
 @keyframes riseFromBelow {
   0% {
     transform: translateY(60px) scale(0.9);
