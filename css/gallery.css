@@ -1,182 +1,265 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #main {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 #back {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 #back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #top {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 #workingarea {
-    margin: 0 auto;
-    position: relative;
-    border: 10px solid #ff2e2e;
-    width: 80%;
-    height: 100vh;
-    max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  border: 10px solid #ff2e2e;
+  width: 80%;
+  height: 100vh;
+  max-width: 1920px;
 }
 
 #nav {
-    padding: 3vw 10vw;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+  padding: 2vw 10vw;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav img {
-    height: 60px;
+  height: 60px;
 }
 
 #nleft {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    color: black;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  gap: 20px;
 }
 
 #navright {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 #nleft a {
-    pointer-events: all;
-    color: #ffffff;
-    text-decoration: none;
+  pointer-events: all;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #nright a {
-    pointer-events: all;
-    color: #ffffff;
-    text-decoration: none;
-} 
+  pointer-events: all;
+  color: #ffffff;
+  text-decoration: none;
+}
 
 #hero {
-    width: 100%;
-    padding: 2vw 10vw;
-    position: absolute;
-    top: 25%;
-    /* transform: translate(0, -50%); */
-    height: 100px;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  padding: 2vw 10vw;
+  position: absolute;
+  top: 15%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #heroleft {
-    min-width: 50%;
-    height: 100px;
-    /* background-color: bisque; */
+  min-width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #heroright {
-    width: 20%;
-    flex-direction: column;
-    align-items: flex-end;
-    color: #fff;
-    /* height: 100px; */
-    /* background-color: rgb(211, 125, 21); */
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  justify-content: space-between;
 }
 
 #heroright p {
-    text-align: right;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.4); 
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 #heroright #imagediv {
-    width: 100%;
-    height: 250px; /* adjust to show enough image */
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-image: url(../images/solo.jpg);
-    background-size: contain;     /* shows full image */
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
+  width: 100%;
+  height: 180px;
+  margin: 15px 0;
+  background-image: url(../images/solo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-
+#heroright #imagediv:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 #heroright p:nth-child(3) {
-    color: #ffffff;
-    margin-bottom: 100px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Add hover effects for glassmorphism cards */
+#heroright p:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Add a subtle shimmer effect */
+#heroright p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+#heroright p:hover::before {
+  left: 100%;
+}
+
+/* Special styling for the quote (last paragraph) */
+#heroright p:last-child {
+  font-style: italic;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+  color: #f8f8f8;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+#heroright p:last-child::after {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
 }
 
 #heroleft .element {
-    position: relative;
-    /* background-color: #ff2e2e; */
-    height: 7vw;
-    overflow: hidden;
+  position: relative;
+  /* background-color: #ff2e2e; */
+  height: 7vw;
+  overflow: hidden;
 }
 
-#heroleft .element h1:nth-child(1){
-    top: 0%;
+#heroleft .element h1:nth-child(1) {
+  top: 0%;
 }
 
 #heroleft .element h1 {
-    position: absolute;
-    font-size: 8vw;
-    top: 100%;
-    left: 0%;
-    font-family: "Squada One", sans-serif;
-    line-height: .9;
-    letter-spacing: .9px;
-    font-weight: 600;
-    font-style: normal;
-    text-transform: uppercase;
-    /* color: #ffffff; */
+  position: absolute;
+  font-size: 8vw;
+  top: 100%;
+  left: 0%;
+  font-family: "Squada One", sans-serif;
+  line-height: 0.9;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  /* color: #ffffff; */
 }
 
 #heroleft button a {
-    pointer-events: all;
-    font-size: 2vw;
-    text-decoration: none;
-    font-family: "Staatliches", sans-serif;
-    color: #000000;
-    font-weight: 200;
+  pointer-events: all;
+  font-size: 2vw;
+  text-decoration: none;
+  font-family: "Staatliches", sans-serif;
+  color: #000000;
+  font-weight: 200;
 }
 
 #heroleft button {
-    pointer-events: all;
-    margin-top: 8vw;
-    padding: 1vw 4vw;
-    border: 4px solid #000000;
-    background-color: #ffffff;
+  pointer-events: all;
+  margin-top: 2vw;
+  padding: 1vw 4vw;
+  border: 4px solid #000000;
+  background-color: #ffffff;
+  align-self: flex-start;
 }
-
 
 /* Transition Bars */
 .transition-bar {
@@ -189,7 +272,7 @@ body {
   display: flex;
   justify-content: center;
   pointer-events: none;
-  transition: transform 1.5s cubic-bezier(.77,0,.18,1); /* was 0.7s */
+  transition: transform 1.5s cubic-bezier(0.77, 0, 0.18, 1); /* was 0.7s */
 }
 
 .top-bar {
