@@ -207,12 +207,7 @@ body::-webkit-scrollbar {
 #firstpic,
 #secpic {
   font-size: 2vw;
-}
-#firstpic h1 {
-  text-decoration: none;
-  font-size: 2vw;
-}
-
+  text-decoration: none;}
 
 #firstpic {
   width: 17vw;
@@ -227,6 +222,9 @@ body::-webkit-scrollbar {
   height: 100%;
   object-fit: cover;
 }
+#firstpic a {
+  text-decoration: none;
+}
 #firstpic h1,
 #secpic h1 {
   letter-spacing: -0.1vw;
@@ -238,6 +236,7 @@ body::-webkit-scrollbar {
 #firstpic p,
 #secpic p {
   opacity: 0.8;
+  color: black;
   font-size: 1vw;
   letter-spacing: -0.06vw;
   margin-top: 10px;
