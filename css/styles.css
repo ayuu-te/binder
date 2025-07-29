@@ -230,6 +230,8 @@ body::-webkit-scrollbar {
 #firstpic h1,
 #secpic h1 {
   letter-spacing: -0.1vw;
+  text-decoration: none;
+  color: blueviolet;
   font-weight: 200;
   font-size: 2vw;
 }
